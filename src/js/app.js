@@ -41,7 +41,9 @@ function render(variables = {}) {
   let twitter = variables.twitter == null ? "4geeksacademy" : variables.twitter;
   let github = variables.github == null ? "4geeksacademy" : variables.github;
   let linkedin =
-    variables.linkedin == null ? "4geeksacademy" : variables.linkedin;
+    variables.linkedin == null
+      ? "school/4geeksacademy"
+      : `in/${variables.linkedin}`;
   let instagram =
     variables.instagram == null ? "4geeksacademy" : variables.instagram;
 
@@ -55,7 +57,7 @@ function render(variables = {}) {
           <ul class=${position}>
             <li><a href="https://twitter.com/${twitter}" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${github}" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/${linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://linkedin.com/${linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${instagram}" target="_blank"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
